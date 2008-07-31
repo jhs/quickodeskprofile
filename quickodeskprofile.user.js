@@ -52,20 +52,19 @@ function xpath(path, forceList, node) {
 /* This is the main program entry after the page loads completely. */
 function main() {
     /* Add the config section after the "Logged in as..." stuff. */
-    var logline = xpath('//ul[@id="logline"]');
-    if(!logline) {
+    var greeting = xpath('//ul[@id="logline"]/li[1]');
+    if(!greeting) {
         /* TODO disable this script because it seems to fail to work with the site's HTML. */
-        debug("Cannot find logline");
+        debug("Cannot find greeting");
         return;
     }
     else {
         /* Insert a new list item with a link to my profile. */
-        debug("Found logline");
-        var entries = xpath('li', true, logline);
-        var newItem = document.createElement('li');
-        newItem.innerHTML = '(<a href="/d/view_profile.php">See my profile</a>)';
+        debug("Found greeting");
+        var myHeading = xpath('strong', false, greeting);
+        var myName    = myHeading.innerHTML;
 
-        logline.insertBefore(newItem, entries[1]);
+        myHeading.innerHTML = '<a href="/d/view_profile.php">' + myName + '</a>';
         debug('done');
     }
 }
