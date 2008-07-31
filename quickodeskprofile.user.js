@@ -65,7 +65,7 @@ function main() {
         var myHeading = xpath('strong', false, greeting);
         var myName    = myHeading.innerHTML;
 
-        myHeading.innerHTML = '<a href="/d/view_profile.php">' + myName + '</a>';
+        myHeading.innerHTML = '<a style="font-weight: inherit;" href="/d/view_profile.php">' + myName + '</a>';
         debug('done');
     }
 }
