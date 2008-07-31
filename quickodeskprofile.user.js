@@ -14,7 +14,8 @@
 // @name          quickoDeskProfile
 // @namespace     http://proven-corporation.com/
 // @description   A quick link to view your public profile from anywhere within oDesk
-// @include       http://www.odesk.com/w/*
+// @include       http://www.odesk.com/*
+// @include       https://www.odesk.com/*
 // ==/UserScript==
 
 /* A simple wrapper for quick debug messages. */
