@@ -10,3 +10,5 @@ Features
 * Add a link to the "Helpful Links" sidebar
 * Completed assignments and current assignments in different tabs, see
   http://www.odesk.com/community/node/4055
+* Tickets containing the phrase "the job opening #\d+" should change to
+  a link to the actual job opening
