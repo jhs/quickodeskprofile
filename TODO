@@ -12,3 +12,5 @@ Features
   http://www.odesk.com/community/node/4055
 * Tickets containing the phrase "the job opening #\d+" should change to
   a link to the actual job opening
+* Highlight or otherwise color-code candidacies depending on the status
+  (e.g. Candidate vs. Interview)
